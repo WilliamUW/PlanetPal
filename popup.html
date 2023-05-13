@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Meta Tags</title>
+		<script type="text/javascript" src="popup.js"></script>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<style>
+			body {
+				background-color: white;
+			}
+			#score-circle {
+    width: 200px;
+    height: 200px;
+    background-color: green; /* or any other desired color */
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#score-circle span {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+}
+
+#score-circle .percentage {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+}
+			/* #score-circle {
+				width: 200px;
+				height: 200px;
+				background-color: #ccc;
+				border-radius: 50%;
+				margin: 20px auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+			#score-circle::before {
+				content: "";
+				width: 80%;
+				height: 80%;
+				background-color: white;
+				border-radius: 50%;
+				position: absolute;
+				z-index: 1;
+			}
+			#score-circle span {
+				font-size: 48px;
+				font-weight: bold;
+				color: white;
+				z-index: 2;
+			}
+			#score-circle .percentage {
+				font-size: 24px;
+				font-weight: bold;
+				position: absolute;
+				bottom: -40px;
+				right: 0;
+			} */
+			#score {
+				color:black !important;
+			}
+			.unknown {
+				background-color: grey !important;
+			}
+			.green {
+				background-color: green !important;
+			}
+			.yellow {
+				background-color: yellow !important;
+			}
+			.red {
+				background-color: red !important;
+			}
+			.explanation-title,
+			.alternative-title {
+				text-align: center;
+				font-size: 30px;
+				display: block;
+			}
+			.explanation-p {
+				font-size: 15px;
+				margin-left: 5%;
+				margin-right: 5%;
+			}
+			.link {
+				font-size: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- <h1>Meta Tags</h1> -->
+		<div id="score-circle" class="unknown">
+			<span id="score">?</span>
+			<div class="percentage">/100</div>
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<p id="credit" class="alternative-title" style="color: green">+0 SustainBuy Credits</p>
+		<p class="explanation-title">Product Analysis</p>
+		<p id="product_explanation" class="explanation-p">
+			Generating Analysis!
+		</p>
+		<!-- <p class="explanation-title">Company Analysis</p>
+		<p id="company_explanation" class="explanation-p">
+			Generating Analysis!
+		</p> -->
+		<p class="alternative-title">Alternatives</p>
+		<p id="alternatives" class="explanation-p">
+			Generating Alternatives!
+		</p>
+		<!-- <ul>
+			<li><a href="https://www.amazon.com/Fujifilm-Instant-Carrying-Assorted-Accessories/dp/B08MDTCVNJ/ref=sr_1_1_sspa?crid=ZCQYDXV4PSFN&keywords=camer&qid=1679179886&sprefix=camer%2Caps%2C100&sr=8-1-spons&smid=A30YQ3CNGTOIT3&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFGQkRKSEdUNzBZSlEmZW5jcnlwdGVkSWQ9QTA0NzAxODhGV1pSRldZTEhTMkYmZW5jcnlwdGVkQWRJZD1BMDcwMjYxNUs2SkRaVFJPRVdQQiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1" class="link">1. Alternative Amazon Link 1</a></li>
+			<li><a href="https://www.amazon.com/Logitech-Tenkeyless-Lightspeed-Mechanical-LIGHTSYNC/dp/B085RLZ1C4/ref=sr_1_1_sspa?crid=12V4MYK0T4V7I&keywords=gaming%2Bkeyboard%2Blogitech%2Bg915&qid=1679180136&sprefix=gaming%2Bkeyboard%2Blogitdch%2B915%2Caps%2C78&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFST0pFVzBZOVlWNEYmZW5jcnlwdGVkSWQ9QTA5MjIyNDcxVUo4M09DMk1DVkImZW5jcnlwdGVkQWRJZD1BMDAxNTkyNzE4NEIzQkpJRE9IM1kmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1" class="link">2. Alternative Amazon Link 2</a></li>
+			<li><a href="https://www.amazon.com/Logitech-Tenkeyless-Lightspeed-Mechanical-LIGHTSYNC/dp/B085RLZ1C4/ref=sr_1_1_sspa?crid=12V4MYK0T4V7I&keywords=gaming%2Bkeyboard%2Blogitech%2Bg915&qid=1679180136&sprefix=gaming%2Bkeyboard%2Blogitdch%2B915%2Caps%2C78&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFST0pFVzBZOVlWNEYmZW5jcnlwdGVkSWQ9QTA5MjIyNDcxVUo4M09DMk1DVkImZW5jcnlwdGVkQWRJZD1BMDAxNTkyNzE4NEIzQkpJRE9IM1kmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1" class="link">3. Alternative Amazon Link 3</a></li>
+		</ul> -->
+		<p class="alternative-title">Extracted Information</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Property</th>
+					<th>Http-equiv</th>
+					<th class="valueth">Value</th>
+					<th>Charset</th>
+				</tr>
+			</thead>
+			<tbody id="metaTable"></tbody>
+		</table>
+		<p id="alternatives" class="alternative-title" style="font-size: 20px">
+			Thank you for using SustainBuy!
+		</p>
+		<img width="650" height="650" style="align-self: center;" src="./icon.png" alt="alternatetext">
+
+
+		<script src="popup.js"></script>
+	</body>
+</html>

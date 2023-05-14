@@ -64,7 +64,10 @@
         const scores = request.score.match(regex);
 
         score = parseInt(scores[0]);
-        credits = parseInt(score / 7);
+        const Price = parseFloat(request.price);
+        const multiplier = parseInt((0.25)*score*(1-(Price/1000)));
+        const points = parseInt(multiplier * (score * (Price/1000)));
+        credits = points;
 
         product_explanation = request.product_explanation;
         alternatives = request.alternatives;

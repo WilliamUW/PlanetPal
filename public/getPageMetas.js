@@ -1,5 +1,5 @@
 
-const API_KEY = 'INPUT KEY HERE FOR DEMO ONLY';
+const API_KEY = 'ADD YOUR OWN API KEY';
 const MODEL = "text-davinci-002"; //or text-davinci-003
 
 
@@ -42,6 +42,14 @@ if (productDetails) {
     console.log('Table not found on this page');
 }
 
+let PriceWhole = document.querySelectorAll(".a-price-whole")[0].innerText
+PriceWhole = parseInt(PriceWhole.replace("\n", "").replace(".", ""))
+
+
+let PriceFrac = document.querySelectorAll(".a-price-fraction")[0].innerText
+PriceFrac = parseInt(PriceFrac.replace("\n", "").replace(".", ""))
+
+const PriceTotal = parseFloat( `${PriceWhole}.${PriceFrac}`)
 
 const metas = document.getElementsByTagName('meta');
 const metaArr = [];
@@ -150,6 +158,7 @@ async function getResult(score_prompt, product_explanation_prompt, alternative_p
         console.log(data.choices);
         chrome.runtime.sendMessage({
             method: "getMetas",
+            price: PriceWhole,
             metas: metaArr,
             score: data.choices[0].text.trim(),
             product_explanation: data.choices[1].text.trim(),

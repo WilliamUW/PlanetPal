@@ -1,11 +1,11 @@
 // @ts-nocheck
 
 function getMetas() {
-    var message = document.querySelector('#metaTable');
+    const message = document.querySelector('#metaTable');
     message.innerHTML = '';
     chrome.tabs.executeScript(null, {
         file: "getPageMetas.ts"
-    }, function () {
+    }, () => {
         // If you try it into an extensions page or the webstore/NTP you'll get an error
         if (chrome.runtime.lastError) {
             message.innerText = 'There was an error : \n' + chrome.runtime.lastError.message;
@@ -13,7 +13,10 @@ function getMetas() {
     });
 }
 
-chrome.runtime.onMessage.addListener(function (request, sender) {
+
+type RequestResult = { method: string; metas: string | any[]; score: string; product_explanation: string; alternatives: string; };
+
+chrome.runtime.onMessage.addListener((request: RequestResult) => {
     const includeMetaTable = true;
     if (includeMetaTable) {
         var metaTable = document.getElementById('metaTable');
@@ -27,13 +30,8 @@ chrome.runtime.onMessage.addListener(function (request, sender) {
     const scores = request.score.match(regex);
 
     const score = parseInt(scores[0]);
-    // score = Math.max(score, 100)
-    // score = Math.min(score, 0)
-    console.log("before credit")
-    let credit = parseInt(score / 7)
-    // credit = Math.max(0, credit)
-    //let credit = max(score - 50, 0);
-    //credit = floor(credit/7);
+    console.log("before credit");
+    let credit = parseInt(score / 7);
     console.log(credit);
     document.getElementById("credit").innerHTML = "+" + credit + " PlanetPal Credits";
 
@@ -46,7 +44,7 @@ chrome.runtime.onMessage.addListener(function (request, sender) {
     // Use the score to determine the background color
     console.log(score);
     console.log(score >= 80);
-    let backgroundColor;
+    let backgroundColor: string;
     if (score > 70) {
         backgroundColor = "green";
     } else if (score < 30) {

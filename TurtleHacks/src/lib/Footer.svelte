@@ -3,7 +3,7 @@
     export let icon: string | null = null;
 </script>
 
-<div class="flex flex-col items-center -mt-8 md:mt-0 text-base">
+<div class="flex flex-col items-center text-base">
     <p class="block">{title}</p>
 
     {#if icon}

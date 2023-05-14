@@ -1,5 +1,5 @@
 <script lang="ts">
-    let score: number | "?" = "?";
+    export let score: number | "?" = "?";
 
     function getColor(score: number | "?"): string {
         if (score === "?") {
@@ -13,12 +13,12 @@
         }
     }
 
-    let color = getColor(score);
+    $: color = getColor(score);
 
-    setInterval(() => {
-        score = Math.floor(Math.random() * 100);
-        color = getColor(score);
-    }, 1000);
+    // setInterval(() => {
+    //     score = Math.floor(Math.random() * 100);
+    //     color = getColor(score);
+    // }, 1000);
 </script>
 
 <div
@@ -29,7 +29,7 @@
         >{score}</span
     >
     <div
-        class="percentage absolute text-xl md:text-xl -mb-11 md:-mb-16 right-2.5 md:right-4"
+        class="percentage absolute text-xl md:text-xl -mb-11 md:-mb-16 -right-10 bottom-10 md:right-10"
     >
         /100
     </div>

@@ -1,6 +1,6 @@
 # PlanetPal
-
 Your personal sustainable shopping companion powered by NLP, AI, and Blockchain. Helping the 2.14 billion e-commerce shoppers around the world shop greener while getting rewarded for it! 🌎
+![image]("https://media.discordapp.net/attachments/1105338071270031360/1107166434154512404/icon.png?width=550&height=550")
 
 ## 💡 Inspiration
 - We all want to be sustainable, but it can be challenging. 

@@ -1,3 +1,7 @@
+# PlanetPal
+
+Your personal sustainable shopping companion powered by NLP, AI, and Blockchain. Helping the 2.14 billion e-commerce shoppers around the world shop greener while getting rewarded for it! 🌎
+
 ## 💡 Inspiration
 - We all want to be sustainable, but it can be challenging. 
 - Two major barriers are the time-consuming research required to find sustainable products and the lack of incentives for people to shop sustainably. 

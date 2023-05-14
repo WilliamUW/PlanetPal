@@ -47,5 +47,5 @@
 
     <Section />
 
-    <Footer title="Thank you for using SustainBuy!" {icon} />
+    <Footer title="Thank you for using PlanetPal!" {icon} />
 </div>

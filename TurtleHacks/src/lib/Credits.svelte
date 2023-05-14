@@ -3,5 +3,5 @@
 </script>
 
 <h2 class="mt-3 md:mt-8 text-xl font-extralight text-green-400">
-    +{credits} SustainBuy Credits
+    +{credits} PlanetPal Credits
 </h2>

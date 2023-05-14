@@ -30,12 +30,6 @@ if (productDetails) {
                 result.push(`Brand: ${cellValue}`)
                 break;
             }
-            /*if (cellText === 'Manufacturer') {
-                const cellValue = cells[i].textContent.trim();
-                console.log('Manufacturer:', cellValue);
-                result.push(`Manufacturer: ${cellValue}`)
-                break;
-            }*/
             if (cellText === 'Special features') {
                 const cellValue = cells[i].textContent.trim();
                 console.log('Special features:', cellValue);
@@ -215,7 +209,6 @@ fetch(url, {
     body: JSON.stringify(body),
     headers: headers
 }).then(response => {
-    console.log("11111111")
     if (response.ok) {
         return response.json();
     } else {

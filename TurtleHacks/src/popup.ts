@@ -4,7 +4,7 @@ function getMetas() {
     var message = document.querySelector('#metaTable');
     message.innerHTML = '';
     chrome.tabs.executeScript(null, {
-        file: "getPageMetas.js"
+        file: "getPageMetas.ts"
     }, function () {
         // If you try it into an extensions page or the webstore/NTP you'll get an error
         if (chrome.runtime.lastError) {

@@ -33,7 +33,7 @@ chrome.runtime.onMessage.addListener(function(request, sender) {
 	//let credit = max(score - 50, 0);
 	//credit = floor(credit/7);
 	console.log(credit);
-	document.getElementById("credit").innerHTML = "+" + credit + " SustainaBuy Credits";
+	document.getElementById("credit").innerHTML = "+" + credit + " PlanetPal Credits";
 
 	document.getElementById("score").innerText = score;
 

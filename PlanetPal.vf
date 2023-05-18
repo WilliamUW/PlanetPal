@@ -12,18 +12,18 @@
     },
     "members": [],
     "linkType": "STRAIGHT",
-    "image": "https://cm4-production-assets.s3.amazonaws.com/1684016778675-planetpal.jpg",
+    "image": "https://cm4-production-assets.s3.amazonaws.com/1684017018738-planetpal-removebg-preview.png",
     "customThemes": [],
     "aiAssistSettings": {
       "aiPlayground": true,
       "generateNoMatch": true
     },
     "_version": 1.2,
-    "updatedAt": "2023-05-13T22:26:18.909Z",
+    "updatedAt": "2023-05-14T22:48:17.457Z",
     "creatorID": 130972,
     "updatedBy": 130972,
     "apiPrivacy": "public",
-    "liveVersion": "6460072091014d00078e4e58",
+    "liveVersion": "64604ab262fa7f0007dcf7ff",
     "knowledgeBase": {
       "documents": {
         "64600ea6b7f5bc0006e52dd9": {
@@ -38,6 +38,24 @@
           "updatedAt": "2023-05-13T22:26:46.685Z",
           "creatorID": 130972,
           "documentID": "64600ea6b7f5bc0006e52dd9"
+        }
+      },
+      "settings": {
+        "chunkStrategy": {
+          "type": "recursive_text_splitter",
+          "size": 1200,
+          "overlap": 200
+        },
+        "search": {
+          "limit": 3,
+          "metric": "IP"
+        },
+        "summarization": {
+          "prompt": "",
+          "mode": "prompt",
+          "model": "gpt-3.5-turbo",
+          "temperature": 0.1,
+          "system": "You are an FAQ AI chat assistant. Information will be provided to help answer the user's questions. Keep your answers concise and within 4 sentences."
         }
       }
     },
@@ -63,18 +81,19 @@
         ]
       },
       "publishing": {
-        "avatar": "https://cdn.voiceflow.com/assets/logo.png",
-        "color": "#2E7FF1",
-        "description": "Our virtual assistant is here to help you.",
-        "image": "https://cdn.voiceflow.com/assets/logo.png",
+        "avatar": "https://cm4-production-assets.s3.amazonaws.com/1684016987480-planetpal-removebg-preview.png",
+        "color": "#2E72F1",
+        "description": "Your personal sustainable shopping companion that rewards you for shopping green!",
+        "image": "https://cm4-production-assets.s3.amazonaws.com/1684016985798-planetpal-removebg-preview.png",
         "persistence": "localStorage",
         "position": "right",
         "spacing": {
           "side": 24,
           "bottom": 24
         },
-        "title": "GreenBuddy",
-        "watermark": true
+        "title": "PlanetPal",
+        "watermark": true,
+        "launcher": "https://cm4-production-assets.s3.amazonaws.com/1684016984224-planetpal-removebg-preview.png"
       },
       "platform": "webchat"
     },
@@ -141,7 +160,7 @@
     "prototype": {
       "type": "chat",
       "data": {
-        "name": "GreenBuddy",
+        "name": "PlanetPal",
         "locales": [
           "en-US"
         ]
@@ -2842,7 +2861,7 @@
                   {
                     "children": [
                       {
-                        "text": "What else can I help with?"
+                        "text": "Any questions I can help answer?"
                       }
                     ]
                   }
@@ -2862,7 +2881,11 @@
               "dynamic": []
             }
           },
-          "nodeID": "6438720682cf9d2273b904f1"
+          "nodeID": "6438720682cf9d2273b904f1",
+          "coords": [
+            0,
+            0
+          ]
         },
         "6438720682cf9d2273b904f9": {
           "type": "text",
@@ -2875,8 +2898,18 @@
                   {
                     "children": [
                       {
-                        "text": "Hi, welcome to PlanetPal - Your sustainable shopping companion. With the power of AI, we help you make informed choices to protect the planet and earn rewards along the way",
-                        "fontWeight": "700"
+                        "text": "Welcome to"
+                      },
+                      {
+                        "fontWeight": "700",
+                        "text": " PlanetPal - Your personal sustainable shopping companion powered by NLP, AI, and Blockchain. "
+                      },
+                      {
+                        "text": "PlanetPal helps the 2.14 billion e-commerce shoppers around the world shop greener while getting rewarded for it! 🌎"
+                      },
+                      {
+                        "fontWeight": "700",
+                        "text": "\r\n\r"
                       }
                     ]
                   }
@@ -3110,13 +3143,13 @@
                       {
                         "point": [
                           1381.73,
-                          267.93
+                          328.43
                         ]
                       },
                       {
                         "point": [
                           1525.63,
-                          267.93
+                          328.43
                         ],
                         "allowedToTop": false
                       }
@@ -3187,6 +3220,7 @@
           "data": {
             "name": "New Block 4",
             "steps": [
+              "6460102b64385636f8f56258",
               "646005bf64385636f8f561e0"
             ]
           },
@@ -3195,6 +3229,39 @@
             1691.627332123798,
             188.43361057369654
           ]
+        },
+        "6460102b64385636f8f56258": {
+          "type": "text",
+          "data": {
+            "name": "Text",
+            "texts": [
+              {
+                "id": "gk2az39k9",
+                "content": [
+                  {
+                    "children": [
+                      {
+                        "text": "Thank you for using PlanetPal! "
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "canvasVisibility": "preview",
+            "portsV2": {
+              "byKey": {},
+              "builtIn": {
+                "next": {
+                  "type": "next",
+                  "target": null,
+                  "id": "6460102b64385636f8f56259"
+                }
+              },
+              "dynamic": []
+            }
+          },
+          "nodeID": "6460102b64385636f8f56258"
         }
       }
     }
